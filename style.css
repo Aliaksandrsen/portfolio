@@ -1,0 +1,365 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #484242;
+}
+
+.container {
+  background-color: #443c3c;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 3%;
+  font-family: "Book Antiqua", "Palatino Linotype", serif;
+  color: rgba(223, 221, 195, 0.8);
+  background: url("assets/images/frame.png") #2d2a2a repeat-y;
+}
+
+.mobile {
+  width: 375px;
+  min-height: 100vh;
+  font-size: 5px;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0%;
+}
+
+.header .my-photo-conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2% 4%;
+  width: 40%;
+  height: 100%;
+}
+
+.header__main-info {
+  padding: 2% 4%;
+  width: 50%;
+}
+
+.my-photo {
+  border: 6px solid #433737;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  max-width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.h1 {
+  font-size: 5rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .h1 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .h1 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.communications {
+  text-align: left;
+}
+
+.communications__title {
+  font-size: 3rem;
+  padding: 4% 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .communications__title {
+    font-size: 2rem;
+  }
+}
+
+.communications__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  list-style-type: none;
+}
+
+.communications__item {
+  display: block;
+  position: relative;
+  font-size: 2.5rem;
+  line-height: 36px;
+  list-style-type: none;
+  color: rgba(255, 253, 224, 0.82);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .communications__item {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .communications__item {
+    font-size: 1.2rem;
+  }
+}
+
+.communications__item_github::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  width: 46px;
+  height: 36px;
+  overflow: hidden;
+  background: url("assets/images/sprites.png") -12px -136px;
+}
+
+.communications__item_telegram::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  width: 46px;
+  height: 36px;
+  overflow: hidden;
+  background: url("assets/images/sprites.png") -12px -74px;
+}
+
+.communications__item_gmail::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  width: 46px;
+  /*need space between anchor and icon*/
+  height: 36px;
+  overflow: hidden;
+  /*hidden other sprite images*/
+  background: url("assets/images/sprites.png") -12px -12px;
+  /*background set only if we have container*/
+}
+
+main {
+  width: 80%;
+  margin: 3% auto;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #5a5858;
+  color: rgba(223, 221, 195, 0.8);
+  cursor: pointer;
+  padding: 2% 3%;
+  width: 100%;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  font-family: "Book Antiqua", "Palatino Linotype", serif;
+  text-align: left;
+  outline: none;
+  font-size: 3rem;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+@media only screen and (max-width: 425px) {
+  .collapsible {
+    font-size: 3rem;
+  }
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #474343;
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  max-height: 0;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  background-color: #3e3737;
+  color: rgba(255, 253, 224, 0.82);
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .content {
+    font-size: 1.5rem;
+  }
+}
+
+.content__list {
+  list-style-type: none;
+  padding: 3%;
+}
+
+.content__years {
+  font-weight: 900;
+  font-size: 2.3rem;
+  color: #8e8e7b;
+}
+
+.sl {
+  margin-top: 4%;
+}
+
+.sl__img {
+  width: 100%;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible2,
+.collapsible3 {
+  background-color: #5a5858;
+  color: rgba(223, 221, 195, 0.8);
+  cursor: pointer;
+  padding: 2% 3%;
+  width: 100%;
+  border: none;
+  font-family: "Book Antiqua", "Palatino Linotype", serif;
+  text-align: left;
+  outline: none;
+  font-size: 3rem;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+@media only screen and (max-width: 425px) {
+  .collapsible2,
+  .collapsible3 {
+    font-size: 3rem;
+  }
+}
+
+.active2,
+.active3,
+.collapsible2:hover,
+.collapsible3:hover {
+  background-color: #474343;
+}
+
+@media only screen and (max-width: 768px) {
+  .collapsible2:after,
+  .collapsible3:after {
+    content: "\002B";
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .active2:after,
+  .active3:after {
+    content: "\2212";
+  }
+}
+
+.content2,
+.content3 {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  background-color: #3e3737;
+  color: rgba(255, 253, 224, 0.82);
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .content2,
+  .content3 {
+    font-size: 1.5rem;
+  }
+}
+
+.content2__title,
+.content3__title {
+  padding: 2% 3%;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.content2__list,
+.content3__list {
+  list-style-type: circle;
+  margin: 15px 0;
+}
+
+.content2__years,
+.content3__years {
+  font-weight: 900;
+  font-size: 2.3rem;
+  color: #8e8e7b;
+}
+
+@media only screen and (min-width: 769px) {
+  .collapsible2__wrapper,
+  .collapsible3__wrapper {
+    width: 50%;
+  }
+  .content2,
+  .content3 {
+    max-height: 100%;
+    height: 100%;
+  }
+  .slick-initialized .slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .active2,
+  .active3,
+  .collapsible2:hover,
+  .collapsible3:hover {
+    padding: 2% 3%;
+    background-color: #5a5858;
+    cursor: default;
+  }
+}
+/*# sourceMappingURL=style.css.map */
