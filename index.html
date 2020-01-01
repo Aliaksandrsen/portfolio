@@ -3,33 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="keywords" content="Aliaksandr Senkevich, contact Info, skills">
   <meta name="description" content="This page is dedicated to the junior JS developer Aliaksandr Senkevich">
   <title>My page</title>
-
   <link rel="stylesheet" type="text/css" href="animate.css">
-  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-
+  <link rel="stylesheet" type="text/css" href="slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
 
 <body>
   <div class="container">
     <header class="header">
-
       <div class="my-photo-conteiner">
         <img class="my-photo" src="assets/images/myphoto.jpg" alt="myphoto">
       </div>
-
       <div class="header__main-info">
-
         <h1 class="h1 animated bounce">Aliaksandr Senkevich</h1>
-
         <section class="communications">
           <h2 class="communications__title">Contact Info:</h2>
           <ul class="communications__list">
@@ -44,13 +36,9 @@
           </ul>
         </section>
       </div>
-
     </header>
 
     <main>
-
-      <!--------------------------------------------------------------- expansion panel -->
-
       <button type="button" class="collapsible">Education</button>
 
       <div class="content">
@@ -66,17 +54,12 @@
         </ul>
       </div>
 
-      <!-- !------------------------------------------------------------------- slider -->
-
       <div class="sl">
-
+        <!-- ------------------------------------------------------------------- 1 slide -->
         <div class="sl__slide">
-
           <!-- before adaptive in desctope and use flex for static description -->
           <div class="collapsible2__wrapper">
-
-            <button type="button" class="collapsible2">Description</button>
-
+            <button type="button" class="collapsible2">Description</button> <!-- ! -->
             <div class="content2">
               <h4 class="content2__title">Theyalow</h4>
               <ul class="content2__list">
@@ -86,49 +69,74 @@
               </ul>
             </div>
           </div>
-
-          <a href="theyalow/project1.html">
-            <img class="sl__img sl__img_1" src="assets/images/image1.jpg" alt="Second slide">
+          <a href="https://they-alow.netlify.com">
+            <img class="sl__img" src="assets/images/image1.jpg" alt="First slide">
           </a>
-
         </div>
-
-
+        <!-- --------------------------------------------------------------------------- -->
+        <!-- ------------------------------------------------------------------- 2 slide -->
         <div class="sl__slide">
-
-          <!-- before adaptive in desctope and use flex for static description -->
-          <div class="collapsible3__wrapper">
-
-            <button type="button" class="collapsible3">Description</button>
-
-            <div class="content3">
-              <h4 class="content3__title">Repair design project</h4>
-              <ul class="content3__list">
-                <li class="class=content3__item">Responsive</li>
-                <li class="class=content3__item">HTML</li>
-                <li class="class=content3__item">CSS</li>
-                <li class="class=content3__item">SASS(SCSS)</li>
-                <li class="class=content3__item">SVG</li>
-
+          <div class="collapsible2__wrapper">
+            <button type="button" class="collapsible3">Description</button> <!-- ! -->
+            <div class="content2">
+              <h4 class="content2__title">Repair design project</h4>
+              <ul class="content2__list">
+                <li class="class=content2__item">Responsive</li>
+                <li class="class=content2__item">HTML</li>
+                <li class="class=content2__item">CSS</li>
+                <li class="class=content2__item">SASS(SCSS)</li>
+                <li class="class=content2__item">SVG</li>
               </ul>
             </div>
           </div>
-
-          <a href="repair-design-project/project2.html">
-            <img class="sl__img sl__img_2" src="assets/images/image2.jpg" alt="Second slide">
+          <a href="https://r-d-p.netlify.com">
+            <img class="sl__img" src="assets/images/image2.jpg" alt="Second slide">
           </a>
         </div>
-
+        <!-- --------------------------------------------------------------------------- -->
+         <!-- ------------------------------------------------------------------- 3 slide -->
+         <div class="sl__slide">
+          <div class="collapsible2__wrapper">
+            <button type="button" class="collapsible4">Description</button> <!-- ! -->
+            <div class="content2">
+              <h4 class="content2__title">Virtual keyboard</h4>
+              <ul class="content2__list">
+                <li class="class=content2__item">Vanila JS</li>
+                <li class="class=content2__item">ES 2015</li>
+              </ul>
+            </div>
+          </div>
+          <a href="https://virt-keyboard.netlify.com">
+            <img class="sl__img" src="assets/images/image3.png" alt="Third slide">
+          </a>
+        </div>
+        <!-- --------------------------------------------------------------------------- -->
+          <!-- ------------------------------------------------------------------- 4 slide -->
+          <div class="sl__slide">
+            <div class="collapsible2__wrapper">
+              <button type="button" class="collapsible5">Description</button> <!-- ! -->
+              <div class="content2">
+                <h4 class="content2__title">Fancy weather</h4>
+                <ul class="content2__list">
+                  <li class="class=content2__item">Responsive</li>
+                  <li class="class=content2__item">Vanila JS</li>
+                  <li class="class=content2__item">ES 2015</li>
+                  <li class="class=content2__item">Geolocation API</li>
+                  <li class="class=content2__item">Web Speech API</li>
+                  <li class="class=content2__item">Third-party APIs</li>
+                </ul>
+              </div>
+            </div>
+            <a href="https://my-fancy-weather.netlify.com/">
+              <img class="sl__img" src="assets/images/image4.png" alt="Fourth slide">
+            </a>
+          </div>
+          <!-- --------------------------------------------------------------------------- -->
       </div>
-
-      <!-- !--------------------------------------------------------------------------- -->
-
     </main>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="main.js"></script>
-
   </div>
 </body>
 

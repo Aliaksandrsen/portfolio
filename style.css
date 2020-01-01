@@ -114,7 +114,7 @@ body {
 }
 
 .communications__item {
-  display: block;
+  display: inline-block;
   position: relative;
   font-size: 2.5rem;
   line-height: 36px;
@@ -256,7 +256,9 @@ main {
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible2,
-.collapsible3 {
+.collapsible3,
+.collapsible4,
+.collapsible5 {
   background-color: #5a5858;
   color: rgba(223, 221, 195, 0.8);
   cursor: pointer;
@@ -273,29 +275,32 @@ main {
 
 @media only screen and (max-width: 425px) {
   .collapsible2,
-  .collapsible3 {
+  .collapsible3,
+  .collapsible4,
+  .collapsible5 {
     font-size: 3rem;
   }
 }
 
 .active2,
-.active3,
 .collapsible2:hover,
-.collapsible3:hover {
+.collapsible3:hover,
+.collapsible4:hover .collapsible5:hover {
   background-color: #474343;
 }
 
 @media only screen and (max-width: 768px) {
   .collapsible2:after,
-  .collapsible3:after {
+  .collapsible3:after,
+  .collapsible4:after,
+  .collapsible5:after {
     content: "\002B";
     color: white;
     font-weight: bold;
     float: right;
     margin-left: 5px;
   }
-  .active2:after,
-  .active3:after {
+  .active2:after {
     content: "\2212";
   }
 }
@@ -309,6 +314,22 @@ main {
   background-color: #3e3737;
   color: rgba(255, 253, 224, 0.82);
   font-size: 3rem;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 769px) {
+  .content2,
+  .content3 {
+    position: absolute;
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content2,
+  .content3 {
+    font-size: 2.5rem;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -325,6 +346,15 @@ main {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 769px) {
+  .content2__title,
+  .content3__title {
+    display: inline-block;
+    padding: 0 3%;
+    margin: 2% 0;
+  }
+}
+
 .content2__list,
 .content3__list {
   list-style-type: circle;
@@ -338,9 +368,14 @@ main {
   color: #8e8e7b;
 }
 
+@media only screen and (max-width: 426px) {
+  .slick-arrow {
+    visibility: hidden;
+  }
+}
+
 @media only screen and (min-width: 769px) {
-  .collapsible2__wrapper,
-  .collapsible3__wrapper {
+  .collapsible2__wrapper {
     width: 50%;
   }
   .content2,
@@ -352,14 +387,23 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
   }
   .active2,
   .active3,
   .collapsible2:hover,
-  .collapsible3:hover {
+  .collapsible3:hover,
+  .collapsible4:hover,
+  .collapsible5:hover {
     padding: 2% 3%;
     background-color: #5a5858;
     cursor: default;
   }
+}
+
+.blur {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  z-index: 0;
 }
 /*# sourceMappingURL=style.css.map */

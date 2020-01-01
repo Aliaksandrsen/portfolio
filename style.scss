@@ -27,15 +27,10 @@ body {
 }
 
 // =================================================== header
-
 .header {
   display: flex;
   justify-content: center;
   padding: 0%;
-
-  @media only screen and (max-width: 768px) {
-    // padding: 0;
-  }
 
   .my-photo-conteiner {
     display: flex;
@@ -97,7 +92,7 @@ body {
   }
 
   &__item {
-    display: block;
+    display: inline-block;
     position: relative;
 
     font-size: 2.5rem;
@@ -155,7 +150,6 @@ body {
     background: url("assets/images/sprites.png") -12px -12px; /*background set only if we have container*/
   }
 }
-
 // =================================================== end header
 
 main {
@@ -163,8 +157,7 @@ main {
   margin: 3% auto;
 }
 
-//! =================================================== expansion panel
-
+// =================================================== expansion panel
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
   background-color: hsl(0, 1%, 35%);
@@ -231,11 +224,9 @@ main {
     color: hsl(60, 8%, 52%);
   }
 }
-
-//! =============================================== end expansion panel
+// =============================================== end expansion panel
 
 //========================================================= slider
-
 .sl {
   margin-top: 4%;
 }
@@ -244,11 +235,12 @@ main {
   width: 100%;
 }
 
-//! =================================================== expansion panel 2,3
-
+// =================================================== expansion panel 2,3
 /* Style the button that is used to open and close the collapsible content */
 .collapsible2,
-.collapsible3 {
+.collapsible3,
+.collapsible4,
+.collapsible5 {
   background-color: hsl(0, 1%, 35%);
   color: hsla(56, 30%, 82%, 0.8);
   cursor: pointer;
@@ -267,16 +259,18 @@ main {
 }
 
 .active2,
-.active3,
 .collapsible2:hover,
-.collapsible3:hover {
+.collapsible3:hover,
+.collapsible4:hover .collapsible5:hover {
   background-color: hsl(0, 3%, 27%);
 }
 
 @media only screen and (max-width: 768px) {
   //========================== add +
   .collapsible2:after,
-  .collapsible3:after {
+  .collapsible3:after,
+  .collapsible4:after,
+  .collapsible5:after {
     content: "\002B";
     color: white;
     font-weight: bold;
@@ -284,8 +278,7 @@ main {
     margin-left: 5px;
   }
 
-  .active2:after,
-  .active3:after {
+  .active2:after {
     content: "\2212";
   }
   //==========================
@@ -293,13 +286,22 @@ main {
 
 .content2,
 .content3 {
-  // padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: hsl(0, 6%, 23%);
   color: hsla(56, 100%, 94%, 0.82);
   font-size: 3rem;
+  z-index: 2;
+
+  @media only screen and (max-width: 769px) {
+    position: absolute;
+    width: 20%;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2.5rem;
+  }
 
   @media only screen and (max-width: 425px) {
     font-size: 1.5rem;
@@ -309,6 +311,12 @@ main {
     padding: 2% 3%;
     margin: 15px 0;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 769px) {
+      display: inline-block;
+      padding: 0 3%;
+      margin: 2% 0;
+    }
   }
 
   &__list {
@@ -323,12 +331,16 @@ main {
   }
 }
 
-//! =============================================== end expansion panel 2,3
+.slick-arrow {
+  @media only screen and (max-width: 426px) {
+    visibility: hidden;
+  }
+}
+// =============================================== end expansion panel 2,3
 
 //==================================================== for decctope version
 @media only screen and (min-width: 769px) {
-  .collapsible2__wrapper,
-  .collapsible3__wrapper {
+  .collapsible2__wrapper {
     width: 50%;
   }
 
@@ -340,15 +352,23 @@ main {
 
   .slick-initialized .slick-slide {
     display: flex;
+    position: relative;
   }
   //========================================= no buttons effects in decktop
   .active2,
   .active3,
   .collapsible2:hover,
-  .collapsible3:hover {
+  .collapsible3:hover,
+  .collapsible4:hover,
+  .collapsible5:hover {
     padding: 2% 3%;
     background-color: hsl(0, 1%, 35%);
     cursor: default;
   }
 }
 //=========================================================================
+
+.blur {
+  filter: blur(2px);
+  z-index: 0;
+}
