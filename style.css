@@ -258,7 +258,8 @@ main {
 .collapsible2,
 .collapsible3,
 .collapsible4,
-.collapsible5 {
+.collapsible5,
+.collapsible6 {
   background-color: #5a5858;
   color: rgba(223, 221, 195, 0.8);
   cursor: pointer;
@@ -277,7 +278,8 @@ main {
   .collapsible2,
   .collapsible3,
   .collapsible4,
-  .collapsible5 {
+  .collapsible5,
+  .collapsible6 {
     font-size: 3rem;
   }
 }
@@ -285,7 +287,9 @@ main {
 .active2,
 .collapsible2:hover,
 .collapsible3:hover,
-.collapsible4:hover .collapsible5:hover {
+.collapsible4:hover,
+.collapsible5:hover,
+.collapsible6:hover {
   background-color: #474343;
 }
 
@@ -293,7 +297,8 @@ main {
   .collapsible2:after,
   .collapsible3:after,
   .collapsible4:after,
-  .collapsible5:after {
+  .collapsible5:after,
+  .collapsible6:after {
     content: "\002B";
     color: white;
     font-weight: bold;
@@ -394,7 +399,8 @@ main {
   .collapsible2:hover,
   .collapsible3:hover,
   .collapsible4:hover,
-  .collapsible5:hover {
+  .collapsible5:hover,
+  .collapsible6:hover {
     padding: 2% 3%;
     background-color: #5a5858;
     cursor: default;

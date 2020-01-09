@@ -240,7 +240,8 @@ main {
 .collapsible2,
 .collapsible3,
 .collapsible4,
-.collapsible5 {
+.collapsible5,
+.collapsible6 {
   background-color: hsl(0, 1%, 35%);
   color: hsla(56, 30%, 82%, 0.8);
   cursor: pointer;
@@ -261,7 +262,9 @@ main {
 .active2,
 .collapsible2:hover,
 .collapsible3:hover,
-.collapsible4:hover .collapsible5:hover {
+.collapsible4:hover,
+.collapsible5:hover,
+.collapsible6:hover {
   background-color: hsl(0, 3%, 27%);
 }
 
@@ -270,7 +273,8 @@ main {
   .collapsible2:after,
   .collapsible3:after,
   .collapsible4:after,
-  .collapsible5:after {
+  .collapsible5:after,
+  .collapsible6:after {
     content: "\002B";
     color: white;
     font-weight: bold;
@@ -360,7 +364,8 @@ main {
   .collapsible2:hover,
   .collapsible3:hover,
   .collapsible4:hover,
-  .collapsible5:hover {
+  .collapsible5:hover,
+  .collapsible6:hover {
     padding: 2% 3%;
     background-color: hsl(0, 1%, 35%);
     cursor: default;
